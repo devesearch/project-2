@@ -1,6 +1,13 @@
 import graph from "../assets/brands/graphs.png";
 import about from "../assets/hero/about-image.jpeg";
 import aboutsecond from "../assets/hero/about-second.jpeg";
+import groceriesImg from "../assets/images/groceries.png";
+import beverageImg from "../assets/images/Beverage.png";
+import personalCareImg from "../assets/images/PersonalCare.png";
+import homeCareImg from "../assets/images/HomeCare.png";
+import agroImg from "../assets/images/AgroCommodities.png";
+import starchImg from "../assets/images/Starch.jpeg";
+import processedFruitsImg from "../assets/images/ProcessedFruits.jpeg";
 
 const heroData = {
   
@@ -31,7 +38,7 @@ const heroData = {
       "Staples, snacks, and packaged essentials sourced with care and shipped with speed for your markets.",
     buttonText: "Request Catalog",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: groceriesImg,
     height: "90vh",
   },
   beverage: {
@@ -41,7 +48,7 @@ const heroData = {
       "From bottled water to functional drinks, we assemble beverage lines tailored to your market needs.",
     buttonText: "Talk to Us",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: beverageImg,
     height: "90vh",
   },
   personalCare: {
@@ -51,7 +58,7 @@ const heroData = {
       "Skin, hair, baby, and hygiene essentials sourced from trusted brands, packed to your market specs.",
     buttonText: "Plan Your Assortment",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: personalCareImg,
     height: "90vh",
   },
   homeCare: {
@@ -61,7 +68,7 @@ const heroData = {
       "Cleaners, detergents, air care, and utilities bundled for modern households and horeca needs.",
     buttonText: "Book a Call",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: homeCareImg,
     height: "90vh",
   },
   agro: {
@@ -71,7 +78,7 @@ const heroData = {
       "Grains, pulses, spices, and staples procured from trusted growers with export-ready documentation.",
     buttonText: "View Catalog",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: agroImg,
     height: "90vh",
   },
   starch: {
@@ -81,7 +88,7 @@ const heroData = {
       "Native and modified starches curated for bakery, confectionery, paper, and textile applications.",
     buttonText: "Request Specs",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: starchImg,
     height: "90vh",
   },
   processedFruit: {
@@ -91,7 +98,7 @@ const heroData = {
       "Purees, concentrates, canned fruits, and ready-to-serve packs sourced from certified processors.",
     buttonText: "Request Samples",
     buttonLink: "/Contact",
-    image: aboutsecond,
+    image: processedFruitsImg,
     height: "90vh",
   },
   contact: {
