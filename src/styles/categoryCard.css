@@ -1,0 +1,40 @@
+.category-card {
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+
+.category-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color:black;
+}
+
+.category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.category-card li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  color:black;
+}
+
+.category-card .arrow {
+  font-weight: bold;
+  margin-right: 8px;
+  color:black;
+}

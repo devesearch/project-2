@@ -1,0 +1,32 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 80s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  padding: 0 5px;
+}
+
+.marquee-item img {
+  height: 160px;
+  width: auto;
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

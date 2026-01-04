@@ -1,0 +1,101 @@
+/* ===== About page section spacing ===== */
+.home-section {
+  padding: 80px 0;
+}
+
+/* ===== About card wrapper ===== */
+.about-card-single-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== About card sizing ===== */
+.about-card-single {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ===== Optional typography overrides for About ===== */
+.about-card-single h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+}
+
+.about-card-single p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: black;
+}
+
+/* ============================  grids image ==========================*/
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color:black;
+}
+
+/* Section */
+.services-section {
+  padding: 40px 60px;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.service-card {
+  border-radius: 6px;
+}
+
+/* Featured card spans 2 columns */
+.service-card--featured {
+  grid-row: span 2;
+}
+
+/* Image on top */
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Featured image taller */
+.service-card--featured img {
+  height: 100%;
+}
+
+/* Text */
+.service-card h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Hide description spacing if empty */
+.service-card p {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

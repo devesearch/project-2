@@ -1,0 +1,115 @@
+.home-section {
+  padding: 40px 40px;
+}
+
+/* Row cards */
+.home-card-row {
+  display: flex;
+  gap: 24px;
+  
+}
+.home-card-row .card img {
+  width:180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home-card-row .card {
+  flex: 1;
+}
+
+.home-card h3 {
+  color: green;
+  font-weight: 700;
+}
+.home-card p {
+  color: black;
+  font-weight: 400;
+}
+
+/*===================== Single card ============================*/
+.home-card-single-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.home-card-single {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.home-card-single h3,
+.home-card-single p{
+  display: block;
+  width: 100%;
+}
+
+.home-card-single h3{
+  margin: 16px 16px 8px;
+  font-weight: 700;
+  font-size:40px;
+}
+
+.home-card-single p{
+  margin: 16px 16px 16px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height:1.5;  
+}
+
+/*==================== Text-only card ===========================*/
+.home-card-text-only {
+  display: flex;
+  justify-content: center;
+}
+
+.home-card-text-only .card-text {
+  max-width: 800px;
+  text-align: center;
+}
+
+.home-card-text-only h3,
+.home-card-text-only p,
+.home-card-text-only2 h3,
+.home-card-text-only2 p{
+  margin: 10px;
+}
+
+.home-card-text-only h3{
+  color: green;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.home-card-text-only p{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/*====================== Category grid ============================*/
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Fix text-only card width */
+.home-card-text-only2 .card {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-card-text-only2 h3{
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.home-card-text-only2 p{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+

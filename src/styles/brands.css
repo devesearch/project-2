@@ -1,0 +1,37 @@
+
+/* Section */
+.brands-section {
+  padding: 20px 20px;
+}
+
+/* Grid */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Card */
+.brands-card {
+  border-radius: 6px;
+}
+
+/* Image on top */
+.brands-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+}
