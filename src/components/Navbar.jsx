@@ -1,6 +1,6 @@
 import { useState } from "react";
 import brochure from "../assets/brands/brochure.pdf";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/logo.jpeg";
 import "../styles/Navbar.css";
 
 const Navbar = () => {

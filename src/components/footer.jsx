@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/logo.jpeg";
 import "../styles/footer.css";
 
 const phone = import.meta.env.VITE_PHONE_NUMBER;
