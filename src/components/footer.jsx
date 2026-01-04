@@ -1,6 +1,9 @@
 import logo from "../assets/images/logo.svg";
 import "../styles/footer.css";
 
+const phone = import.meta.env.VITE_PHONE_NUMBER;
+const email = import.meta.env.VITE_EMAIL_ADDRESS;
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -47,9 +50,9 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
-              <li>📍 Sonipat, Haryana</li>
-              <a href="tel:+917988514386"><li>📞 +91 7988514386</li></a>
-              <a href="mailto:info@bulkbuddy.in"><li>✉️ info@bulkbuddy.in</li></a>
+              <li>📍 Rohini, Delhi</li>
+              <a href= {`tel:+${phone}`}><li>📞 {phone}</li></a>
+              <a href={`mailto:${email}`}><li>✉️ {email}</li></a>
             </ul>
 
             <div className="footer-social">

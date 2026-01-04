@@ -1,6 +1,6 @@
 import { useState } from "react";
-import logo from "../assets/images/logo.svg";
 import brochure from "../assets/brands/brochure.pdf";
+import logo from "../assets/images/logo.svg";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -8,11 +8,13 @@ const Navbar = () => {
 
   const closeMenu = () => setOpen(false);
 
+  const email = import.meta.env.VITE_EMAIL_ADDRESS;
+
   return (
 
   <header>
     <div className="top-bar">Global Reach, Trusted Supply - Your FMCG Export Partner!
-      <text className="top-text"><a href="mailto:kushalenterprises@gmail.com">kushalenterprises@gmail.com</a></text>
+      <text className="top-text"><a href={`mailto:${email}`}>{email}</a></text>
     </div>
     <nav className="navbar">
       
