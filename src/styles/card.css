@@ -41,3 +41,19 @@
   justify-content: center;
   align-items: center;
 }
+.card-btn {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 10px 22px;
+  background: yellow;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.card-btn:hover {
+  background: #145a1f;
+}

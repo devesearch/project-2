@@ -11,7 +11,7 @@
 
 /* ===== About card sizing ===== */
 .about-card-single {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
 }
 
@@ -23,9 +23,14 @@
 }
 
 .about-card-single p {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5;
   color: black;
+}
+
+.about-card-single h3,
+.about-card-single p{
+  margin: 0;
 }
 
 /* ============================  grids image ==========================*/

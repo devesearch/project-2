@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
-              <li>📍 Rohini, Delhi</li>
+              <li> Rohini, Delhi</li>
               <a href= {`tel:+${phone}`}><li>📞 {phone}</li></a>
               <a href={`mailto:${email}`}><li>✉️ {email}</li></a>
             </ul>

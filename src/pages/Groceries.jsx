@@ -1,3 +1,6 @@
+import beverageIcon from "../assets/categories/beverage.png";
+import groceryIcon from "../assets/categories/grocery.png";
+import homeIcon from "../assets/categories/home.png";
 import BrandMarquee from "../components/BrandMarquee";
 import Card from "../components/card";
 import CategoryCard from "../components/CategoryCard";
@@ -6,9 +9,6 @@ import "../styles/groceries.css";
 import brandLogos from "../utils/brandLogos";
 import categoryData from "../utils/categoryData";
 import heroData from "../utils/heroData";
-import beverageIcon from "../assets/categories/beverage.png";
-import groceryIcon from "../assets/categories/grocery.png";
-import homeIcon from "../assets/categories/home.png";
 
 const groceryFeatures = [
   {
@@ -100,7 +100,7 @@ const Groceries = () => {
 
       <section className="groceries-system animate-fade-up">
         <div className="groceries-system__text">
-          <h2>My Super Store – Smart Shopping, Seamless Management</h2>
+          <h2>My Enterprises – Smart Shopping, Seamless Management</h2>
           <p>
             A modern digital platform built for performance, usability, and scale. It simplifies product management and
             streamlines customer orders so store owners and shoppers both enjoy a smooth experience.
@@ -136,7 +136,7 @@ const Groceries = () => {
         </div>
 
         <div className="groceries-system__cta hover-lift">
-          <h3>Why My Super Store?</h3>
+          <h3>Why My Enterprises?</h3>
           <p>Designed for modern retail workflows with a user-friendly interface, secure scalable architecture, and efficient data design.</p>
           <a href="/Contact" className="groceries-system__button glow-button">Talk to us about My Super Store</a>
         </div>
@@ -179,7 +179,7 @@ const Groceries = () => {
           </div>
 
           <div className="groceries-fruits__card hover-lift">
-            <h3>⭐ Why Choose My Super Store?</h3>
+            <h3>⭐ Why Choose Us?</h3>
             <ul className="groceries-fruits__list">
               <li>Premium quality products</li>
               <li>Affordable pricing</li>

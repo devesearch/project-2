@@ -16,7 +16,7 @@ const About = () => {
             <section className="home-section">
                 <div className="home-card-single-wrapper">
                 <Card
-                    {...cardsData.single}
+                    {...cardsData.aboutsingle}
                     variant="horizontal"
                     className="home-card-single"
                 />
@@ -31,7 +31,7 @@ const About = () => {
             <section className="home-section">
                 <div className="about-card-single-wrapper">
                 <Card
-                    {...cardsData.single}
+                    {...cardsData.ourmission}
                     variant="image-right"
                     className="about-card-single"
                 />
@@ -39,7 +39,7 @@ const About = () => {
 
                 <div className="about-card-single-wrapper">
                 <Card
-                    {...cardsData.single}
+                    {...cardsData.WhoWeAre}
                     variant="horizontal"
                     className="about-card-single"
                 />
@@ -47,7 +47,7 @@ const About = () => {
 
                 <div className="about-card-single-wrapper">
                 <Card
-                    {...cardsData.single}
+                    {...cardsData.Export}
                     variant="image-right"
                     className="about-card-single"
                 />

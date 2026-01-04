@@ -1,6 +1,8 @@
 import "../styles/ctaBanner.css";
 
-const CtaBanner = ({ text, phone }) => {
+const phone = import.meta.env.VITE_PHONE_NUMBER;
+
+const CtaBanner = ({ text }) => {
   return (
     <section className="cta-banner animate-fade-up">
       <div className="cta-content">

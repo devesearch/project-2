@@ -17,7 +17,7 @@ const Brands = () => {
         <section className="home-section">
             <div className="home-card-text-only2">
             <Card
-            {...cardsData.textOnly2}
+            {...cardsData.TopBrands}
             variant="vertical"
             className="home-card-text2"
             />
@@ -37,15 +37,7 @@ const Brands = () => {
             </div>
         </section>
 
-        <section className="home-section">
-            <div className="home-card-text-only2">
-            <Card
-            {...cardsData.textOnly2}
-            variant="vertical"
-            className="home-card-text2"
-            />
-        </div>
-        </section>
+        <h3 className="statement">Khushal Enterprises is an authorized exporter of multiple well-established FMCG brands, including Pillsbury, Unilever, Banjaras, Ching’s Secret, Fruity, Marico, Pigeon, and more. We specialize in distributing branded products efficiently across diverse international markets.</h3>
 
         <BrandMarquee logos={servicelogos} />
 

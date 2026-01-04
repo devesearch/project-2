@@ -1,13 +1,14 @@
 import graph from "../assets/brands/graphs.png";
 import about from "../assets/hero/about-image.jpeg";
 import aboutsecond from "../assets/hero/about-second.jpeg";
-import groceriesImg from "../assets/images/groceries.png";
-import beverageImg from "../assets/images/Beverage.png";
-import personalCareImg from "../assets/images/PersonalCare.png";
-import homeCareImg from "../assets/images/HomeCare.png";
+import contactu from "../assets/hero/contacu.png";
 import agroImg from "../assets/images/AgroCommodities.png";
-import starchImg from "../assets/images/Starch.jpeg";
+import beverageImg from "../assets/images/Beverage.png";
+import groceriesImg from "../assets/images/Groceries.png";
+import homeCareImg from "../assets/images/HomeCare.png";
+import personalCareImg from "../assets/images/PersonalCare.png";
 import processedFruitsImg from "../assets/images/ProcessedFruits.jpeg";
+import starchImg from "../assets/images/Starch.jpeg";
 
 const heroData = {
   
@@ -22,7 +23,7 @@ const heroData = {
     subtitle:
       "Khushal Enterprises delivers high-demand FMCG goods worldwide, aiming to be India’s top exporter. We offer competitive pricing, expert handling, and fast, reliable trade solutions.",
     buttonText: "Request a Quote",
-    buttonLink: "",
+    buttonLink: "/Contact",
     image: aboutsecond,
     height: "100vh",
   },
@@ -108,7 +109,7 @@ const heroData = {
       "",
     buttonText: "Contact Us",
     buttonLink: "",
-    image: aboutsecond,
+    image: contactu,
     height: "100vh",
   },
 };
