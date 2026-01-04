@@ -11,10 +11,9 @@ const Footer = () => {
 
           {/* LOGO + ABOUT */}
           <div className="footer-col footer-about">
-            <img src={logo} alt="Bulk Buddy" className="footer-logo" />
+            <img src={logo} alt="Khushal Enterprises" className="footer-logo" />
             <p>
-              Your Trusted Partner in Global Trade. Bulk Buddy International
-              Exports is a dynamic and forward thinking export company with a
+              Your Trusted Partner in Global Trade. Khushal Enterprises is a dynamic and forward thinking export company with a
               global footprint.
             </p>
           </div>
@@ -23,10 +22,10 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Brands</li>
-              <li>Contact Us</li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/About">About Us</a></li>
+              <li><a href="/Brands">Brands</a></li>
+              <li><a href="/Contact">Contact Us</a></li>
             </ul>
           </div>
 
@@ -34,13 +33,13 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Products</h4>
             <ul>
-              <li>Agro Commodities</li>
-              <li>Starch</li>
-              <li>Processed Fruits Products</li>
-              <li>Groceries</li>
-              <li>Personal Care</li>
-              <li>Beverage</li>
-              <li>Home Care</li>
+              <li><a href="/Agro">Agro Commodities</a></li>
+              <li><a href="/Starch">Starch</a></li>
+              <li><a href="/ProcessedFruits">Processed Fruits Products</a></li>
+              <li><a href="/Groceries">Groceries</a></li>
+              <li><a href="/PersonalCare">Personal Care</a></li>
+              <li><a href="/Beverage">Beverage</a></li>
+              <li><a href="/HomeCare">Home Care</a></li>
             </ul>
           </div>
 
@@ -49,8 +48,8 @@ const Footer = () => {
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
               <li>📍 Sonipat, Haryana</li>
-              <li>📞 +91 7988514386</li>
-              <li>✉️ info@bulkbuddy.in</li>
+              <a href="tel:+917988514386"><li>📞 +91 7988514386</li></a>
+              <a href="mailto:info@bulkbuddy.in"><li>✉️ info@bulkbuddy.in</li></a>
             </ul>
 
             <div className="footer-social">
@@ -65,8 +64,8 @@ const Footer = () => {
 
       {/* BOTTOM BAR */}
       <div className="footer-bottom">
-        <p>Copyright © 2025 Bulk Buddy</p>
-        <p>Designed By King of Digital Marketing</p>
+        <p>Copyright © 2025 Khushal Enterprises</p>
+        <p>Designed By Devesearch</p>
       </div>
 
     </footer>

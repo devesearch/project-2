@@ -1,5 +1,5 @@
 const WhyFeature = ({ title, text }) => (
-  <div className="why-feature">
+  <div className="why-feature animate-fade-up hover-lift">
     <div className="why-icon">✓</div>
     <div>
       <h4>{title}</h4>

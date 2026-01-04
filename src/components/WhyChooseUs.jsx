@@ -11,10 +11,10 @@ const WhyChooseUs = () => {
         <div className="why-left">
           <span className="why-line"></span>
 
-          <h2>Why Choose Bulk Buddy?</h2>
+          <h2>Why Choose Khushal Enterprises?</h2>
 
           <p className="why-desc">
-            At Bulk Buddy, we focus on delivering quality products at competitive
+            At Khushal Enterprises, we focus on delivering quality products at competitive
             prices with efficient service and trusted global partnerships.
           </p>
 

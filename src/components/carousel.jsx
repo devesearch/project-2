@@ -19,7 +19,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel">
+    <div className="carousel animate-fade-up">
       {/* Slides */}
       <div className="carousel-slides">
         {images.map((img, index) => (

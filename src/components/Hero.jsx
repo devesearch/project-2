@@ -5,7 +5,7 @@ const Hero = ({ data }) => {
 
   return (
     <section
-      className={`hero hero--${type}`}
+      className={`hero hero--${type} animate-fade-up`}
       style={{
         height: height || "80vh",
         backgroundImage: image && type !== "split"
@@ -15,11 +15,11 @@ const Hero = ({ data }) => {
     >
       {/* OVERLAY & TEXT HERO */}
       {(type === "overlay" || type === "text") && (
-        <div className="hero-content">
+        <div className="hero-content animate-fade-up">
           {title && <h1>{title}</h1>}
           {subtitle && <p>{subtitle}</p>}
           {buttonText && (
-            <a href={buttonLink} className="hero-btn">
+            <a href={buttonLink} className="hero-btn glow-button">
               {buttonText}
             </a>
           )}
@@ -28,7 +28,7 @@ const Hero = ({ data }) => {
 
       {/* SPLIT HERO */}
       {type === "split" && (
-        <div className="hero-split">
+        <div className="hero-split animate-fade-up">
           <div className="hero-text">
             <h1>{title}</h1>
             <p>{subtitle}</p>

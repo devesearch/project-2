@@ -1,0 +1,52 @@
+.starch-intro {
+  max-width: 900px;
+  margin: 48px auto 32px;
+  padding: 0 5vw;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #102a43;
+}
+
+.starch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 0 5vw 48px;
+}
+
+.starch-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.05);
+}
+
+.starch-card img {
+  height: 90px;
+  width: 90px;
+  object-fit: contain;
+  margin: 18px auto 0;
+}
+
+.starch-brands {
+  padding: 12px 0 64px;
+  text-align: center;
+}
+
+.starch-brands h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+@media (max-width: 600px) {
+  .starch-intro {
+    font-size: 0.98rem;
+    margin: 40px auto 24px;
+  }
+
+  .starch-brands h2 {
+    font-size: 1.6rem;
+  }
+}

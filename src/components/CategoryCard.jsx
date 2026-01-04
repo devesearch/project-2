@@ -2,7 +2,7 @@ import "../styles/categoryCard.css";
 
 const CategoryCard = ({ title, icon, items, bgColor }) => {
   return (
-    <div className="category-card" style={{ backgroundColor: bgColor }}>
+    <div className="category-card animate-fade-up hover-lift" style={{ backgroundColor: bgColor }}>
       <img src={icon} alt={title} className="category-icon" />
 
       <h3>{title}</h3>

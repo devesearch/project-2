@@ -2,7 +2,7 @@ import "../styles/card.css";
 
 const Card = ({ image, title, description, variant,  className }) => {
   return (
-    <div className={`card card--${variant} ${className}`}>
+    <div className={`card card--${variant} ${className} animate-fade-up hover-lift`}>
      {image && <img src={image} alt={title} />}
       <div className="card-text">
         <h3>{title}</h3>

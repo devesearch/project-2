@@ -15,8 +15,8 @@ const ContactSection = () => {
       <div className="contact-container">
 
         {/* LEFT SIDE */}
-        <div className="contact-left">
-          <h2>Get in Touch with Bulk Buddy</h2>
+        <div className="contact-left animate-fade-up">
+          <h2>Get in Touch with Khushal Enterprises</h2>
           <p className="contact-subtitle">
             Your Global Export Partner – Reach Out Today!
           </p>
@@ -53,7 +53,7 @@ const ContactSection = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="contact-right">
+        <div className="contact-right animate-fade-up animate-delay-1">
           <h2>Send Your Inquiry Now</h2>
           <span className="form-underline"></span>
 
@@ -62,7 +62,7 @@ const ContactSection = () => {
             <input type="email" placeholder="Your Email Id" />
             <input type="tel" placeholder="Phone No." />
             <textarea placeholder="Message" rows="4"></textarea>
-            <button type="submit">SUBMIT</button>
+            <button type="submit" className="glow-button hover-lift">SUBMIT</button>
           </form>
         </div>
 
