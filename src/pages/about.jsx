@@ -14,11 +14,11 @@ const About = () => {
 
             {/* single card */}
             <section className="home-section">
-                <div className="home-card-single-wrapper">
+                <div className="about-card-single-wrapper">
                 <Card
                     {...cardsData.aboutsingle}
                     variant="horizontal"
-                    className="home-card-single"
+                    className="about-card-single"
                 />
                 </div>
             </section>

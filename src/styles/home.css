@@ -41,7 +41,7 @@
 }
 
 .home-card-single {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
 }
 
@@ -49,18 +49,16 @@
 .home-card-single p{
   display: block;
   width: 100%;
+  margin:0;
 }
 
 .home-card-single h3{
-  margin: 16px 16px 8px;
   font-weight: 700;
   font-size:40px;
 }
 
 .home-card-single p{
-  margin: 16px 16px 16px;
-  font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   line-height:1.5;  
 }
 
