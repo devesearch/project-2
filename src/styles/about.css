@@ -1,6 +1,6 @@
 /* ===== About page section spacing ===== */
 .home-section {
-  padding: 80px 0;
+  padding: clamp(40px, 6vw, 80px) clamp(14px, 4vw, 32px);
 }
 
 /* ===== About card wrapper ===== */
@@ -13,17 +13,18 @@
 .about-card-single {
   max-width: 1300px;
   width: 100%;
+  padding: 0 clamp(14px, 4vw, 32px);
 }
 
 /* ===== Optional typography overrides for About ===== */
 .about-card-single h3 {
-  font-size: 40px;
+  font-size: clamp(1.8rem, 1.5vw + 1.2rem, 2.8rem);
   font-weight: 700;
   color: black;
 }
 
 .about-card-single p {
-  font-size: 20px;
+  font-size: clamp(1rem, 0.6vw + 0.85rem, 1.25rem);
   line-height: 1.5;
   color: black;
 }
@@ -38,52 +39,54 @@
 /* Heading */
 .heading {
   text-align: center;
-  font-size: 42px;
+  font-size: clamp(1.8rem, 1.5vw + 1.2rem, 2.8rem);
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: clamp(30px, 4vw, 50px);
   color:black;
 }
 
 /* Section */
 .services-section {
-  padding: 40px 60px;
+  padding: clamp(30px, 6vw, 60px) clamp(14px, 4vw, 32px);
 }
 
 /* Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(20px, 3vw, 32px);
 }
 
 /* Card */
 .service-card {
   border-radius: 6px;
+  overflow: hidden;
 }
 
 /* Featured card spans 2 columns */
 .service-card--featured {
-  grid-row: span 2;
+  grid-column: span 1;
 }
 
 /* Image on top */
 .service-card img {
   width: 100%;
-  height: 220px;
+  height: clamp(200px, 25vw, 260px);
   object-fit: cover;
 }
 
 /* Featured image taller */
 .service-card--featured img {
-  height: 100%;
+  height: clamp(240px, 35vw, 340px);
 }
 
 /* Text */
 .service-card h3 {
   text-align: center;
-  font-size: 18px;
+  font-size: clamp(1rem, 0.6vw + 0.85rem, 1.2rem);
   font-weight: 600;
   margin-top: 12px;
+  padding: 0 clamp(10px, 2vw, 14px);
 }
 
 /* Hide description spacing if empty */
@@ -98,9 +101,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card--featured {
+    grid-column: span 1;
   }
 }
 

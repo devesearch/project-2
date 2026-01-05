@@ -3,7 +3,7 @@
   margin: 48px auto 32px;
   padding: 0 5vw;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.15rem);
   line-height: 1.6;
   color: #102a43;
 }
@@ -24,9 +24,9 @@
 
 .pf-card img {
   height: 90px;
-  width: 90px;
+  width: clamp(80px, 10vw, 100px);
   object-fit: contain;
-  margin: 18px auto 0;
+  margin: clamp(14px, 2vw, 18px) auto 0;
 }
 
 .pf-brands {
@@ -40,13 +40,54 @@
   color: #0f172a;
 }
 
-@media (max-width: 600px) {
-  .pf-intro {
-    font-size: 0.98rem;
-    margin: 40px auto 24px;
-  }
+
 
   .pf-brands h2 {
     font-size: 1.6rem;
+  }
+
+
+@media (max-width: 900px) {
+  .processedFruits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .processedFruits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .processedFruits-intro {
+    font-size: clamp(0.92rem, 0.3vw + 0.8rem, 1rem);
+    margin: clamp(28px, 3vw, 40px) auto clamp(20px, 2vw, 24px);
+  }
+
+  .processedFruits-category h2,
+  .processedFruits-brands h2 {
+    font-size: clamp(1.4rem, 1vw + 0.9rem, 1.8rem);
+  }
+  
+  .processedFruits-bulk__button {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .processedFruits-bulk {
+    gap: clamp(12px, 1.5vw, 16px);
+  }
+
+  .processedFruits-bulk__cards {
+    gap: clamp(12px, 1.5vw, 14px);
+  }
+
+  .processedFruits-grid {
+    gap: clamp(12px, 1.5vw, 16px);
+  }
+
+  .bullet-grid {
+    gap: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
   }
 }
