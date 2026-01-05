@@ -1,3 +1,6 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FloatingActions from "./components/FloatingComponents";
 import Footer from "./components/footer";
@@ -14,7 +17,19 @@ import PersonalCare from "./pages/PersonalCare";
 import ProcessedFruits from "./pages/ProcessedFruits";
 import Starch from "./pages/Starch";
 
+
+
+
 const App = () => {
+
+  useEffect(() => {
+  AOS.init({
+    once: true,       
+    duration: 800,
+    easing: "ease-out-cubic",
+  });
+}, []);
+
   return (
     <BrowserRouter>
       <Navbar />

@@ -4,10 +4,19 @@ const phone = import.meta.env.VITE_PHONE_NUMBER;
 
 const CtaBanner = ({ text }) => {
   return (
-    <section className="cta-banner animate-fade-up">
+    <section
+      className="cta-banner"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
       <div className="cta-content">
         <h3>{text}</h3>
-        <a href={`tel:${phone}`} className="cta-button glow-button hover-lift">
+
+        <a
+          href={`tel:${phone}`}
+          className="cta-button glow-button hover-lift"
+        >
           📞 {phone}
         </a>
       </div>

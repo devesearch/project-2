@@ -1,3 +1,11 @@
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaWhatsapp
+} from "react-icons/fa";
 import logo from "../assets/images/logo.jpeg";
 import "../styles/footer.css";
 
@@ -50,15 +58,15 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
-              <li> Rohini, Delhi</li>
-              <a href= {`tel:+${phone}`}><li>📞 {phone}</li></a>
-              <a href={`mailto:${email}`}><li>✉️ {email}</li></a>
+              <li><FaMapMarkerAlt /> Rohini, Delhi</li>
+              <a href= {`tel:+${phone}`}><li><FaPhoneAlt /> {phone}</li></a>
+              <a href={`mailto:${email}`}><li><FaEnvelope /> {email}</li></a>
             </ul>
 
             <div className="footer-social">
-              <span>📷</span>
-              <span>📘</span>
-              <span>💬</span>
+              <span><FaInstagram /></span>
+              <span><FaFacebookF /></span>
+              <span><FaWhatsapp /></span>
             </div>
           </div>
 

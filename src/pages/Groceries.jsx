@@ -10,6 +10,8 @@ import brandLogos from "../utils/brandLogos";
 import categoryData from "../utils/categoryData";
 import heroData from "../utils/heroData";
 
+const phone = import.meta.env.VITE_PHONE_NUMBER;
+
 const groceryFeatures = [
   {
     image: groceryIcon,
@@ -138,7 +140,7 @@ const Groceries = () => {
         <div className="groceries-system__cta hover-lift">
           <h3>Why My Enterprises?</h3>
           <p>Designed for modern retail workflows with a user-friendly interface, secure scalable architecture, and efficient data design.</p>
-          <a href="/Contact" className="groceries-system__button glow-button">Talk to us about My Super Store</a>
+          <a href= {`tel:+${phone}`} className="groceries-system__button glow-button">Talk to us </a>
         </div>
       </section>
 

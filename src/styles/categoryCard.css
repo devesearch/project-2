@@ -2,6 +2,15 @@
   border-radius: 20px;
   padding: 10px;
   text-align: center;
+  padding: 24px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift only */
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
 }
 
 .category-icon {
@@ -38,3 +47,4 @@
   margin-right: 8px;
   color:black;
 }
+

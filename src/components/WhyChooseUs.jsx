@@ -4,7 +4,12 @@ import "../styles/whyChooseUs.css";
 
 const WhyChooseUs = () => {
   return (
-    <section className="why-section">
+    <section
+      className="why-section"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="900"
+    >
       <div className="why-container">
 
         {/* LEFT CONTENT */}

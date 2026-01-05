@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { FaEnvelope } from "react-icons/fa";
 import brochure from "../assets/brands/brochure.pdf";
 import logo from "../assets/images/logo.jpeg";
 import "../styles/Navbar.css";
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -13,8 +13,15 @@ const Navbar = () => {
   return (
 
   <header>
-    <div className="top-bar">Global Reach, Trusted Supply - Your FMCG Export Partner!
-      <text className="top-text"><a href={`mailto:${email}`}>{email}</a></text>
+   <div className="top-bar">
+      Global Reach, Trusted Supply – Your FMCG Export Partner!
+      
+      <span className="top-text">
+        <FaEnvelope />
+        <a href={`mailto:${email}`} className="plain-link">
+          {email}
+        </a>
+      </span>
     </div>
     <nav className="navbar">
       

@@ -1,16 +1,49 @@
 import "../styles/card.css";
 
-const Card = ({ image, title, description, variant,  className, buttonText, buttonLink, }) => {
-  return (
-    <div className={`card card--${variant} ${className} animate-fade-up hover-lift`}>
-     {image && <img src={image} alt={title} />}
-      <div className="card-text">
-        <h3>{title}</h3>
-        <p>{description}</p>
+const Card = ({
+  image,
+  title,
+  description,
+  variant,
+  className,
+  buttonText,
+  buttonLink,
+}) => {
 
-        {/* OPTIONAL BUTTON */}
-        {buttonText && (
-          <a href={buttonLink || "#"} className="card-btn">
+
+  const imageAnimation =
+    variant === "horizontal"
+      ? "fade-right"
+      : variant === "image-right"
+      ? "fade-left"
+      : "fade-up";
+
+  const textAnimation =
+    variant === "horizontal"
+      ? "fade-left"
+      : variant === "image-right"
+      ? "fade-right"
+      : "fade-up";
+
+  return (
+    <div className={`card card--${variant} ${className}`}>
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          data-aos={imageAnimation}
+        />
+      )}
+
+      <div
+        className="card-text"
+        data-aos={textAnimation}
+      >
+        {title && <h3>{title}</h3>}
+        {description && <p>{description}</p>}
+
+        {buttonText && buttonLink && (
+          <a href={buttonLink} className="card-btn">
             {buttonText}
           </a>
         )}

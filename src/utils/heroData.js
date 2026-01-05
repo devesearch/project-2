@@ -10,6 +10,9 @@ import personalCareImg from "../assets/images/PersonalCare.png";
 import processedFruitsImg from "../assets/images/ProcessedFruits.jpeg";
 import starchImg from "../assets/images/Starch.jpeg";
 
+const phone = import.meta.env.VITE_PHONE_NUMBER;
+const email = import.meta.env.VITE_EMAIL_ADDRESS;
+
 const heroData = {
   
   simpleImage: {
@@ -48,7 +51,7 @@ const heroData = {
     subtitle:
       "From bottled water to functional drinks, we assemble beverage lines tailored to your market needs.",
     buttonText: "Talk to Us",
-    buttonLink: "/Contact",
+    buttonLink: `tel:${phone}`,
     image: beverageImg,
     height: "90vh",
   },
@@ -68,7 +71,7 @@ const heroData = {
     subtitle:
       "Cleaners, detergents, air care, and utilities bundled for modern households and horeca needs.",
     buttonText: "Book a Call",
-    buttonLink: "/Contact",
+    buttonLink: `tel:${phone}`,
     image: homeCareImg,
     height: "90vh",
   },
@@ -77,8 +80,8 @@ const heroData = {
     title: "Agro Commodities, Sourced at Scale",
     subtitle:
       "Grains, pulses, spices, and staples procured from trusted growers with export-ready documentation.",
-    buttonText: "View Catalog",
-    buttonLink: "/Contact",
+    buttonText: "Request Catalogue",
+    buttonLink: `mailto:${email}`,
     image: agroImg,
     height: "90vh",
   },
@@ -108,7 +111,7 @@ const heroData = {
     subtitle:
       "",
     buttonText: "Contact Us",
-    buttonLink: "",
+    buttonLink: `mailto:${email}`,
     image: contactu,
     height: "100vh",
   },

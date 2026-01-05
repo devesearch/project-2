@@ -4,9 +4,7 @@ import "../styles/carousel.css";
 const Carousel = ({ images }) => {
   const [current, setCurrent] = useState(0);
 
-  const goToSlide = (index) => {
-    setCurrent(index);
-  };
+  const goToSlide = (index) => setCurrent(index);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % images.length);
@@ -19,7 +17,12 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel animate-fade-up">
+    <div
+      className="carousel"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
       {/* Slides */}
       <div className="carousel-slides">
         {images.map((img, index) => (

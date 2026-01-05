@@ -6,13 +6,19 @@
 
 .marquee-track {
   display: flex;
-  width: fit-content;
+  width: max-content;
   animation: scroll 80s linear infinite;
+  will-change: transform;
 }
 
 .marquee-item {
   flex: 0 0 auto;
   padding: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.marquee-item:hover {
+  transform: translateY(-10px);
 }
 
 .marquee-item img {
@@ -21,7 +27,11 @@
   opacity: 1;
 }
 
-/* Animation */
+/* Optional pause */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);

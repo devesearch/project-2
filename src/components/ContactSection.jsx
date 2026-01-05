@@ -27,27 +27,23 @@ const ContactSection = () => {
 
     const { name, email, phone, message } = formData;
 
-    // ❌ Empty check
     if (!name || !email || !phone || !message) {
       alert("All fields are required.");
       return;
     }
 
-    // ❌ Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!emailRegex.test(email)) {
       alert("Please enter a valid email address.");
       return;
     }
 
-    // ❌ Phone validation (digits only, 10–15)
     const phoneRegex = /^[0-9]{10,15}$/;
     if (!phoneRegex.test(phone)) {
       alert("Please enter a valid phone number.");
       return;
     }
 
-    // ✅ Send only if all validations pass
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -75,7 +71,12 @@ const ContactSection = () => {
       <div className="contact-container">
 
         {/* LEFT SIDE */}
-        <div className="contact-left animate-fade-up">
+        <div
+          className="contact-left"
+          data-aos="fade-right"
+          data-aos-once="true"
+          data-aos-duration="800"
+        >
           <h2>Get in Touch with Khushal Enterprises</h2>
           <p className="contact-subtitle">
             Your Global Export Partner – Reach Out Today!
@@ -113,7 +114,12 @@ const ContactSection = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="contact-right animate-fade-up animate-delay-1">
+        <div
+          className="contact-right"
+          data-aos="fade-left"
+          data-aos-once="true"
+          data-aos-duration="800"
+        >
           <h2>Send Your Inquiry Now</h2>
           <span className="form-underline"></span>
 
@@ -145,7 +151,7 @@ const ContactSection = () => {
               onChange={(e) =>
                 setFormData({
                   ...formData,
-                  phone: e.target.value.replace(/\D/g, "") // digits only
+                  phone: e.target.value.replace(/\D/g, "")
                 })
               }
               required

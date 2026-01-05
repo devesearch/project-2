@@ -5,17 +5,19 @@ const Hero = ({ data }) => {
 
   return (
     <section
-      className={`hero hero--${type} animate-fade-up`}
+      className={`hero hero--${type}`}
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="900"
       style={{
         height: height || "80vh",
-        backgroundImage: image && type !== "split"
-          ? `url(${image})`
-          : "none",
+        backgroundImage:
+          image && type !== "split" ? `url(${image})` : "none",
       }}
     >
       {/* OVERLAY & TEXT HERO */}
       {(type === "overlay" || type === "text") && (
-        <div className="hero-content animate-fade-up">
+        <div className="hero-content">
           {title && <h1>{title}</h1>}
           {subtitle && <p>{subtitle}</p>}
           {buttonText && (
@@ -28,7 +30,7 @@ const Hero = ({ data }) => {
 
       {/* SPLIT HERO */}
       {type === "split" && (
-        <div className="hero-split animate-fade-up">
+        <div className="hero-split">
           <div className="hero-text">
             <h1>{title}</h1>
             <p>{subtitle}</p>
