@@ -1,147 +1,296 @@
 .groceries-intro {
   max-width: 900px;
-  margin: clamp(32px, 4vw, 48px) auto;
-  padding: 0 clamp(14px, 4vw, 32px);
+  margin: 48px auto 32px;
+  padding: 0 5vw;
   text-align: center;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.15rem);
+  font-size: 1.05rem;
   line-height: 1.6;
   color: #1f2933;
 }
 
-.groceries-bulk,
-.groceries-system,
-.groceries-fruits {
-  margin: 0 auto clamp(32px, 4vw, 48px);
-  padding: 0 clamp(14px, 4vw, 32px);
+.groceries-bulk {
+  margin: 0 auto 48px;
+  padding: 0 5vw;
   max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, 2vw, 24px);
+  gap: 24px;
 }
 
-.groceries-system__text h2,
-.groceries-fruits__text h2,
-.groceries-bulk__text h2 {
-  font-size: clamp(1.7rem, 1.4vw + 1.1rem, 2.2rem);
+.groceries-system {
+  margin: 0 auto 48px;
+  padding: 0 5vw;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.groceries-system__text h2 {
+  font-size: 2rem;
   margin: 0 0 8px;
   color: #0f172a;
 }
 
-.groceries-system__text p,
-.groceries-fruits__text p,
-.groceries-bulk__text p {
+.groceries-system__text p {
   color: #1f2937;
   line-height: 1.6;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.1rem);
 }
 
-.groceries-system__grid,
-.groceries-fruits__grid,
-.groceries-bulk__cards {
+.groceries-system__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(14px, 2vw, 20px);
+  gap: 18px;
 }
 
-.groceries-system__card,
-.groceries-fruits__card,
-.groceries-bulk__card {
+.groceries-system__card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  padding: clamp(14px, 2vw, 18px);
+  padding: 18px 18px 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.groceries-system__card h3,
-.groceries-fruits__card h3,
-.groceries-bulk__card h3 {
+.groceries-system__card h3 {
   margin: 0 0 8px;
   color: #0f172a;
-  font-size: clamp(1.05rem, 0.6vw + 0.85rem, 1.25rem);
 }
 
-.groceries-system__card p,
-.groceries-fruits__card p,
-.groceries-bulk__card p {
+.groceries-system__card p {
   margin: 0 0 10px;
   color: #1f2937;
   line-height: 1.5;
-  font-size: clamp(0.92rem, 0.4vw + 0.8rem, 1.05rem);
 }
 
-.groceries-system__card ul,
-.groceries-fruits__card ul,
-.groceries-fruits__card ol,
-.groceries-bulk__card ul,
-.bullet-grid {
+.groceries-system__card ul {
   padding-left: 18px;
   margin: 0 0 8px;
   color: #111827;
   line-height: 1.5;
-  font-size: clamp(0.92rem, 0.4vw + 0.8rem, 1.05rem);
 }
 
-.groceries-bulk__card h4 {
-  margin: 14px 0 6px;
+.groceries-system__cta {
+  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.groceries-system__cta h3 {
+  margin: 0 0 8px;
   color: #0f172a;
-  font-size: clamp(1rem, 0.6vw + 0.85rem, 1.15rem);
 }
 
-.groceries-bulk__card .note {
-  font-size: clamp(0.9rem, 0.3vw + 0.8rem, 1rem);
-  color: #4b5563;
+.groceries-system__cta p {
+  margin: 0 0 14px;
+  color: #1f2937;
+  line-height: 1.6;
 }
 
-.groceries-fruits__list,
-.bullet-grid {
+.groceries-system__button {
+  display: inline-block;
+  background: #0ea5e9;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.3);
+}
+
+.groceries-system__button:hover {
+  background: #0284c7;
+}
+
+.groceries-fruits {
+  margin: 0 auto 48px;
+  padding: 0 5vw;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.groceries-fruits__text h2 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.groceries-fruits__text p {
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.groceries-fruits__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.groceries-fruits__card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.groceries-fruits__card h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.groceries-fruits__card p {
+  margin: 0 0 10px;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.groceries-fruits__card ul,
+.groceries-fruits__card ol {
+  padding-left: 18px;
+  margin: 0 0 8px;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.groceries-fruits__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 6px 14px;
   padding-left: 0;
   list-style: none;
 }
 
-.groceries-fruits__list li::before,
-.bullet-grid li::before {
+.groceries-fruits__list li::before {
   content: "• ";
   color: #0ea5e9;
 }
 
-.bullet-grid li::before {
-  color: #16a34a;
-}
-
-.groceries-system__cta,
-.groceries-fruits__cta,
-.groceries-bulk__cta {
+.groceries-fruits__cta {
   background: linear-gradient(135deg, #e0f2fe, #f8fafc);
   border: 1px solid #dbeafe;
   border-radius: 14px;
-  padding: clamp(16px, 2vw, 20px);
+  padding: 18px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.groceries-system__cta h3,
-.groceries-fruits__cta h3,
+.groceries-fruits__cta h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.groceries-fruits__cta p {
+  margin: 0 0 14px;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.groceries-fruits__button {
+  display: inline-block;
+  background: #0ea5e9;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.3);
+}
+
+.groceries-fruits__button:hover {
+  background: #0284c7;
+}
+
+.groceries-bulk__text h2 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.groceries-bulk__text p {
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.groceries-bulk__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.groceries-bulk__card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.groceries-bulk__card h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.groceries-bulk__card h4 {
+  margin: 14px 0 6px;
+  color: #0f172a;
+}
+
+.groceries-bulk__card p {
+  margin: 0 0 10px;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.groceries-bulk__card ul {
+  padding-left: 18px;
+  margin: 0 0 8px;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.groceries-bulk__card .note {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.bullet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 6px 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.bullet-grid li::before {
+  content: "• ";
+  color: #16a34a;
+}
+
+.groceries-bulk__cta {
+  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
 .groceries-bulk__cta h3 {
   margin: 0 0 8px;
   color: #0f172a;
-  font-size: clamp(1.15rem, 0.6vw + 0.95rem, 1.35rem);
 }
 
-.groceries-system__cta p,
-.groceries-fruits__cta p,
 .groceries-bulk__cta p {
   margin: 0 0 14px;
   color: #1f2937;
   line-height: 1.6;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.1rem);
 }
 
-.groceries-system__button,
-.groceries-fruits__button,
 .groceries-bulk__button {
   display: inline-block;
   background: #0ea5e9;
@@ -151,12 +300,8 @@
   text-decoration: none;
   font-weight: 600;
   box-shadow: 0 10px 24px rgba(14, 165, 233, 0.3);
-  font-size: clamp(0.95rem, 0.3vw + 0.85rem, 1.05rem);
-  transition: background 200ms ease;
 }
 
-.groceries-system__button:hover,
-.groceries-fruits__button:hover,
 .groceries-bulk__button:hover {
   background: #0284c7;
 }
@@ -164,8 +309,8 @@
 .groceries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(16px, 2vw, 20px);
-  padding: 0 clamp(14px, 4vw, 32px) clamp(32px, 4vw, 48px);
+  gap: 20px;
+  padding: 0 5vw 48px;
 }
 
 .grocery-card {
@@ -176,20 +321,20 @@
 }
 
 .grocery-card img {
-  height: clamp(80px, 10vw, 100px);
-  width: clamp(80px, 10vw, 100px);
+  height: 90px;
+  width: 90px;
   object-fit: contain;
   margin: 18px auto 0;
 }
 
 .groceries-category {
-  padding: clamp(32px, 4vw, 56px) clamp(14px, 4vw, 32px);
+  padding: 32px 5vw 56px;
   text-align: center;
 }
 
 .groceries-category h2,
 .groceries-brands h2 {
-  font-size: clamp(1.7rem, 1.4vw + 1.1rem, 2.2rem);
+  font-size: 2rem;
   margin-bottom: 18px;
   color: #0f172a;
 }
@@ -200,46 +345,26 @@
 }
 
 .groceries-brands {
-  padding: clamp(12px, 2vw, 24px) 0 clamp(40px, 6vw, 64px);
+  padding: 12px 0 64px;
   text-align: center;
 }
 
-@media (max-width: 900px) {
-  .groceries-system__grid,
-  .groceries-fruits__grid,
-  .groceries-bulk__cards {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 600px) {
+  .groceries-intro {
+    font-size: 0.98rem;
+    margin: 40px auto 24px;
   }
 
-  .groceries-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .groceries-system__grid,
-  .groceries-fruits__grid,
-  .groceries-bulk__cards {
-    grid-template-columns: 1fr;
+  .groceries-system__text h2 {
+    font-size: 1.7rem;
   }
 
-  .groceries-system__button,
-  .groceries-fruits__button,
-  .groceries-bulk__button {
-    width: 100%;
+  .groceries-fruits__text h2 {
+    font-size: 1.7rem;
   }
 
-  .groceries-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .groceries-grid {
-    gap: 16px;
-  }
-
-  .groceries-category {
-    padding: clamp(24px, 3vw, 32px) clamp(12px, 3vw, 20px);
+  .groceries-category h2,
+  .groceries-brands h2 {
+    font-size: 1.6rem;
   }
 }

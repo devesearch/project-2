@@ -1,79 +1,75 @@
 .personal-intro {
   max-width: 900px;
-  margin: clamp(32px, 4vw, 48px) auto clamp(24px, 3vw, 32px);
-  padding: 0 clamp(12px, 3vw, 32px);
+  margin: 48px auto 32px;
+  padding: 0 5vw;
   text-align: center;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.15rem);
+  font-size: 1.05rem;
   line-height: 1.6;
   color: #102a43;
 }
 
 .personal-bulk {
-  margin: 0 auto clamp(32px, 4vw, 48px);
-  padding: 0 clamp(12px, 3vw, 32px);
+  margin: 0 auto 48px;
+  padding: 0 5vw;
   max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, 2vw, 24px);
+  gap: 24px;
 }
 
 .personal-bulk__text h2 {
-  font-size: clamp(1.5rem, 1.6vw + 1rem, 2.3rem);
-  margin: 0 0 clamp(6px, 0.5vw, 12px);
+  font-size: 2rem;
+  margin: 0 0 8px;
   color: #0f172a;
 }
 
 .personal-bulk__text p {
   color: #102a43;
   line-height: 1.6;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.15rem);
 }
 
 .personal-bulk__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(14px, 2vw, 18px);
+  gap: 18px;
 }
 
 .personal-bulk__card {
   background: #ffffff;
   border: 1px solid #e7e5e4;
   border-radius: 14px;
-  padding: clamp(14px, 3vw, 18px) clamp(14px, 3vw, 18px) clamp(12px, 2vw, 14px);
+  padding: 18px 18px 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .personal-bulk__card h3 {
-  margin: 0 0 clamp(6px, 0.5vw, 10px);
+  margin: 0 0 8px;
   color: #0f172a;
-  font-size: clamp(1.05rem, 0.8vw + 0.8rem, 1.35rem);
 }
 
 .personal-bulk__card p {
-  margin: 0 0 clamp(8px, 1vw, 10px);
+  margin: 0 0 10px;
   color: #102a43;
   line-height: 1.5;
-  font-size: clamp(0.92rem, 0.4vw + 0.8rem, 1.05rem);
 }
 
 .personal-bulk__card ul,
 .personal-bulk__card ol {
   padding-left: 18px;
-  margin: 0 0 clamp(6px, 0.5vw, 8px);
+  margin: 0 0 8px;
   color: #111827;
   line-height: 1.5;
-  font-size: clamp(0.92rem, 0.4vw + 0.8rem, 1.05rem);
 }
 
 .personal-bulk__card .note {
-  font-size: clamp(0.88rem, 0.3vw + 0.8rem, 0.98rem);
+  font-size: 0.95rem;
   color: #475569;
 }
 
 .bullet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: clamp(6px, 1vw, 14px) clamp(8px, 1.5vw, 14px);
+  gap: 6px 14px;
   padding-left: 0;
   list-style: none;
 }
@@ -87,53 +83,42 @@
   background: linear-gradient(135deg, #e7f5ff, #f8fafc);
   border: 1px solid #dbeafe;
   border-radius: 14px;
-  padding: clamp(16px, 3vw, 18px);
+  padding: 18px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
 .personal-bulk__cta h3 {
-  margin: 0 0 clamp(6px, 0.5vw, 8px);
+  margin: 0 0 8px;
   color: #0f172a;
-  font-size: clamp(1.15rem, 0.8vw + 0.9rem, 1.45rem);
 }
 
 .personal-bulk__cta p {
-  margin: 0 0 clamp(12px, 2vw, 14px);
+  margin: 0 0 14px;
   color: #102a43;
   line-height: 1.6;
-  font-size: clamp(0.92rem, 0.4vw + 0.8rem, 1.05rem);
 }
 
 .personal-bulk__button {
   display: inline-block;
   background: #0ea5e9;
   color: white;
-  padding: clamp(11px, 2vw, 12px) clamp(16px, 3vw, 18px);
+  padding: 12px 18px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(0.95rem, 0.3vw + 0.85rem, 1.05rem);
   box-shadow: 0 10px 24px rgba(14, 165, 233, 0.3);
-  transition: background 200ms ease;
 }
 
 .personal-bulk__button:hover {
   background: #0284c7;
 }
 
-@media (max-width: 640px) {
-  .personal-bulk__button {
-    width: 100%;
-    display: block;
-  }
-}
-
 .personal-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(16px, 2vw, 20px);
-  padding: 0 clamp(12px, 3vw, 32px) clamp(32px, 4vw, 48px);
+  gap: 20px;
+  padding: 0 5vw 48px;
 }
 
 .personal-card {
@@ -141,39 +126,24 @@
   border: 1px solid #e7e5e4;
   border-radius: 14px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.05);
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.personal-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
 }
 
 .personal-card img {
-  height: clamp(80px, 10vw, 100px);
-  width: clamp(80px, 10vw, 100px);
+  height: 90px;
+  width: 90px;
   object-fit: contain;
-  margin: clamp(14px, 2vw, 18px) auto 0;
-}
-
-.personal-card h3 {
-  font-size: clamp(1.05rem, 0.6vw + 0.85rem, 1.25rem);
-  margin: clamp(10px, 2vw, 14px) 0;
-}
-
-.personal-card p {
-  font-size: clamp(0.92rem, 0.4vw + 0.8rem, 1.05rem);
+  margin: 18px auto 0;
 }
 
 .personal-category {
-  padding: clamp(28px, 4vw, 56px) clamp(12px, 3vw, 32px);
+  padding: 32px 5vw 56px;
   text-align: center;
 }
 
 .personal-category h2,
 .personal-brands h2 {
-  font-size: clamp(1.7rem, 1.4vw + 1.1rem, 2.2rem);
-  margin-bottom: clamp(14px, 2vw, 18px);
+  font-size: 2rem;
+  margin-bottom: 18px;
   color: #0f172a;
 }
 
@@ -183,42 +153,18 @@
 }
 
 .personal-brands {
-  padding: clamp(12px, 2vw, 16px) 0 clamp(48px, 6vw, 64px);
+  padding: 12px 0 64px;
   text-align: center;
 }
 
-@media (max-width: 900px) {
-  .personal-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .personal-grid {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 600px) {
   .personal-intro {
-    font-size: clamp(0.92rem, 0.3vw + 0.8rem, 1rem);
-    margin: clamp(28px, 3vw, 40px) auto clamp(20px, 2vw, 24px);
+    font-size: 0.98rem;
+    margin: 40px auto 24px;
   }
 
   .personal-category h2,
   .personal-brands h2 {
-    font-size: clamp(1.4rem, 1vw + 0.9rem, 1.8rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .personal-bulk {
-    gap: clamp(12px, 1.5vw, 16px);
-  }
-
-  .personal-bulk__cards {
-    gap: clamp(12px, 1.5vw, 14px);
-  }
-
-  .bullet-grid {
-    gap: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+    font-size: 1.6rem;
   }
 }

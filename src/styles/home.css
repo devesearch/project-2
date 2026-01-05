@@ -1,32 +1,35 @@
 .home-section {
-  padding: clamp(24px, 6vw, 48px);
+  padding: clamp(24px, 5vw, 48px);
 }
 
-/* Row cards */
+/* Row cards - responsive grid */
 .home-card-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(16px, 3vw, 28px);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(14px, 2vw, 28px);
 }
+
 .home-card-row .card img {
-  width: clamp(140px, 20vw, 180px);
-  height: clamp(140px, 20vw, 180px);
+  width: 100%;
+  height: clamp(160px, 25vw, 200px);
   object-fit: cover;
 }
 
 .home-card-row .card {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .home-card h3 {
   color: green;
   font-weight: 700;
-  font-size: clamp(1.1rem, 0.8vw + 0.8rem, 1.3rem);
+  font-size: clamp(1rem, 1vw + 0.9rem, 1.3rem);
 }
 .home-card p {
   color: black;
   font-weight: 400;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.05rem);
+  font-size: clamp(0.95rem, 0.5vw + 0.85rem, 1.1rem);
 }
 
 /*===================== Single card ============================*/
@@ -38,7 +41,6 @@
 .home-card-single {
   max-width: 1200px;
   width: 100%;
-  padding: 0 clamp(14px, 4vw, 32px);
 }
 
 .home-card-single h3,
@@ -48,15 +50,15 @@
 }
 
 .home-card-single h3{
-  margin: 16px 0 8px;
+  margin: clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px) 8px;
   font-weight: 700;
-  font-size: clamp(1.8rem, 1.5vw + 1.2rem, 2.8rem);
+  font-size: clamp(2rem, 2.2vw + 1.4rem, 3rem);
 }
 
 .home-card-single p{
-  margin: 16px 0 16px;
+  margin: clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px);
   font-weight: 400;
-  font-size: clamp(1rem, 0.8vw + 0.8rem, 1.4rem);
+  font-size: clamp(1.1rem, 0.8vw + 1rem, 1.4rem);
   line-height:1.5;  
 }
 
@@ -64,7 +66,6 @@
 .home-card-text-only {
   display: flex;
   justify-content: center;
-  padding: 0 clamp(14px, 4vw, 32px);
 }
 
 .home-card-text-only .card-text {
@@ -76,27 +77,27 @@
 .home-card-text-only p,
 .home-card-text-only2 h3,
 .home-card-text-only2 p{
-  margin: clamp(8px, 1vw, 12px);
+  margin: 10px;
 }
 
 .home-card-text-only h3{
   color: green;
   font-weight: 700;
-  font-size: clamp(1.8rem, 1.5vw + 1.2rem, 2.8rem);
+  font-size: clamp(1.9rem, 2vw + 1.4rem, 2.8rem);
 }
 
 .home-card-text-only p{
   font-weight: 400;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.1rem);
+  font-size: clamp(0.95rem, 0.6vw + 0.85rem, 1.2rem);
   line-height: 1.5;
 }
 
 /*====================== Category grid ============================*/
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(16px, 3vw, 24px);
-  padding: 0 clamp(14px, 4vw, 32px);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(16px, 2.5vw, 28px);
+  padding: clamp(24px, 5vw, 48px);
 }
 
 /* Fix text-only card width */
@@ -108,30 +109,82 @@
   align-items: center;
 }
 
-.home-card-text-only2 h3{
-  font-weight: 700;
-  font-size: clamp(1.8rem, 1.5vw + 1.2rem, 2.8rem);
-}
-
 .home-card-text-only2 p{
   font-weight: 400;
-  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.1rem);
+  font-size: clamp(0.95rem, 0.6vw + 0.85rem, 1.2rem);
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .home-card-row {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(12px, 2vw, 20px);
+  }
+
   .category-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: clamp(12px, 2vw, 20px);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .home-section {
-    padding: clamp(16px, 4vw, 24px);
+    padding: clamp(20px, 4vw, 32px);
+  }
+
+  .home-card-row {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .home-card-row .card img {
+    height: clamp(140px, 20vw, 180px);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(12px, 3vw, 18px);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-section {
+    padding: 16px;
+  }
+
+  .home-card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card-row .card img {
+    height: 200px;
+  }
+
+  .home-card-single-wrapper {
+    padding: 16px;
+  }
+
+  .home-card-single h3 {
+    font-size: 1.8rem;
+  }
+
+  .home-card-single p {
+    font-size: 1rem;
   }
 
   .category-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-card-text-only h3,
+  .home-card-text-only2 h3 {
+    font-size: 1.6rem;
+  }
+
+  .home-card-text-only p,
+  .home-card-text-only2 p {
+    font-size: 0.95rem;
   }
 }
 
