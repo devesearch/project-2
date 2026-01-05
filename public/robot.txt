@@ -1,5 +1,5 @@
 user-agent: *
 Allow: /
 
-sitemap: https://yourdomain.com/sitemap.xml      //change this to domain actual
+sitemap: https://www.khushalenterprises.com/sitemap.xml      //change this to domain actual
 
