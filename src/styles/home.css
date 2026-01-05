@@ -1,35 +1,37 @@
 .home-section {
-  padding: clamp(24px, 5vw, 48px);
+  padding: 40px 40px;
 }
 
-/* Row cards - responsive grid */
+/* Row cards */
 .home-card-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(14px, 2vw, 28px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .home-card-row .card img {
-  width: 100%;
-  height: clamp(160px, 25vw, 200px);
+  width:180px;
+  height: 180px;
   object-fit: cover;
 }
 
 .home-card-row .card {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .home-card-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .home-card h3 {
   color: green;
   font-weight: 700;
-  font-size: clamp(1rem, 1vw + 0.9rem, 1.3rem);
 }
 .home-card p {
   color: black;
   font-weight: 400;
-  font-size: clamp(0.95rem, 0.5vw + 0.85rem, 1.1rem);
 }
 
 /*===================== Single card ============================*/
@@ -50,15 +52,15 @@
 }
 
 .home-card-single h3{
-  margin: clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px) 8px;
+  margin: 16px 16px 8px;
   font-weight: 700;
-  font-size: clamp(2rem, 2.2vw + 1.4rem, 3rem);
+  font-size:40px;
 }
 
 .home-card-single p{
-  margin: clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px) clamp(12px, 2vw, 18px);
+  margin: 16px 16px 16px;
   font-weight: 400;
-  font-size: clamp(1.1rem, 0.8vw + 1rem, 1.4rem);
+  font-size: 22px;
   line-height:1.5;  
 }
 
@@ -83,21 +85,26 @@
 .home-card-text-only h3{
   color: green;
   font-weight: 700;
-  font-size: clamp(1.9rem, 2vw + 1.4rem, 2.8rem);
+  font-size: 40px;
 }
 
 .home-card-text-only p{
   font-weight: 400;
-  font-size: clamp(0.95rem, 0.6vw + 0.85rem, 1.2rem);
+  font-size: 18px;
   line-height: 1.5;
 }
 
 /*====================== Category grid ============================*/
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: clamp(16px, 2.5vw, 28px);
-  padding: clamp(24px, 5vw, 48px);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Fix text-only card width */
@@ -109,82 +116,14 @@
   align-items: center;
 }
 
+.home-card-text-only2 h3{
+  font-weight: 700;
+  font-size: 40px;
+}
+
 .home-card-text-only2 p{
   font-weight: 400;
-  font-size: clamp(0.95rem, 0.6vw + 0.85rem, 1.2rem);
+  font-size: 18px;
   line-height: 1.5;
-}
-
-/* Responsive breakpoints */
-@media (max-width: 1024px) {
-  .home-card-row {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: clamp(12px, 2vw, 20px);
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: clamp(12px, 2vw, 20px);
-  }
-}
-
-@media (max-width: 768px) {
-  .home-section {
-    padding: clamp(20px, 4vw, 32px);
-  }
-
-  .home-card-row {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-
-  .home-card-row .card img {
-    height: clamp(140px, 20vw, 180px);
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: clamp(12px, 3vw, 18px);
-  }
-}
-
-@media (max-width: 600px) {
-  .home-section {
-    padding: 16px;
-  }
-
-  .home-card-row {
-    grid-template-columns: 1fr;
-  }
-
-  .home-card-row .card img {
-    height: 200px;
-  }
-
-  .home-card-single-wrapper {
-    padding: 16px;
-  }
-
-  .home-card-single h3 {
-    font-size: 1.8rem;
-  }
-
-  .home-card-single p {
-    font-size: 1rem;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .home-card-text-only h3,
-  .home-card-text-only2 h3 {
-    font-size: 1.6rem;
-  }
-
-  .home-card-text-only p,
-  .home-card-text-only2 p {
-    font-size: 0.95rem;
-  }
 }
 
