@@ -2,58 +2,68 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import FloatingActions from "./components/FloatingComponents";
 import Footer from "./components/footer";
-import Navbar from "./components/Navbar";
-import About from "./pages/About";
-import AgroCommodities from "./pages/AgroCommodities";
-import Beverage from "./pages/Beverage";
-import Brands from "./pages/Brands";
-import Contact from "./pages/Contact";
-import Groceries from "./pages/Groceries";
-import Home from "./pages/Home";
-import HomeCare from "./pages/HomeCare";
-import PersonalCare from "./pages/PersonalCare";
-import ProcessedFruits from "./pages/ProcessedFruits";
-import Starch from "./pages/Starch";
+import Navbar from "./components/navbar";
 
+/* Pages */
+import About from "./pages/about";
+import Brands from "./pages/brands";
+import Contact from "./pages/contact";
+import Home from "./pages/home";
 
+import Beverage from "./pages/beverage";
+import Groceries from "./pages/groceries";
+import HomeCare from "./pages/homecare";
+import PersonalCare from "./pages/personalcare";
 
+import AgroCommodities from "./pages/agrocommodities";
+import PrivacyPolicy from "./pages/privacypolicy";
+import ProcessedFruits from "./pages/processedfruits";
+import Starch from "./pages/starch";
+import Terms from "./pages/terms";
 
 const App = () => {
-
   useEffect(() => {
-  AOS.init({
-    once: true,       
-    duration: 800,
-    easing: "ease-out-cubic",
-  });
-}, []);
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-out-cubic",
+    });
+  }, []);
 
   return (
     <BrowserRouter>
       <Navbar />
 
       <Routes>
-        
+        {/* Main pages */}
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Brands" element={<Brands />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Beverage" element={<Beverage />} />
-        <Route path="/Groceries" element={<Groceries />} />
-        <Route path="/PersonalCare" element={<PersonalCare />} />
-        <Route path="/HomeCare" element={<HomeCare />} />
-        <Route path="/Agro" element={<AgroCommodities />} />
-        <Route path="/Starch" element={<Starch />} />
-        <Route path="/ProcessedFruits" element={<ProcessedFruits />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/contact" element={<Contact />} />
 
+        {/* FMCG dropdown pages */}
+        <Route path="/groceries" element={<Groceries />} />
+        <Route path="/beverage" element={<Beverage />} />
+        <Route path="/personalcare" element={<PersonalCare />} />
+        <Route path="/homeCare" element={<HomeCare />} />
+
+        {/* Products dropdown pages */}
+        <Route path="/agro" element={<AgroCommodities />} />
+        <Route path="/starch" element={<Starch />} />
+        <Route path="/processedfruits" element={<ProcessedFruits />} />
+
+        {/* legal routes */}
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
 
       <Footer />
       <FloatingActions />
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,11 +1,5 @@
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaWhatsapp
-} from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.jpeg";
 import "../styles/footer.css";
 
@@ -15,70 +9,76 @@ const email = import.meta.env.VITE_EMAIL_ADDRESS;
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer-container">
 
-      {/* TOP FOOTER */}
-      <div className="footer-top">
-        <div className="footer-container">
+        {/* BRAND */}
+        <div className="footer-brand">
+          <img src={logo} alt="Khushal Enterprises Logo" className="footer-logo" />
+          <p>
+            Khushal Enterprises is a trusted FMCG trading and distribution
+            partner delivering quality products with reliable global supply.
+          </p>
+        </div>
 
-          {/* LOGO + ABOUT */}
-          <div className="footer-col footer-about">
-            <img src={logo} alt="Khushal Enterprises" className="footer-logo" />
-            <p>
-              Your Trusted Partner in Global Trade. Khushal Enterprises is a dynamic and forward thinking export company with a
-              global footprint.
-            </p>
-          </div>
+        {/* QUICK LINKS */}
+        <div className="footer-links">
+          <h4>Quick Links</h4>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/brands">Brands</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
 
-          {/* QUICK LINKS */}
-          <div className="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/About">About Us</a></li>
-              <li><a href="/Brands">Brands</a></li>
-              <li><a href="/Contact">Contact Us</a></li>
-            </ul>
-          </div>
+        {/* FMCG */}
+        <div className="footer-links">
+          <h4>FMCG</h4>
+          <Link to="/groceries">Groceries</Link>
+          <Link to="/beverage">Beverage</Link>
+          <Link to="/personalcare">Personal Care</Link>
+          <Link to="/homecare">Home Care</Link>
+        </div>
 
-          {/* PRODUCTS */}
-          <div className="footer-col">
-            <h4>Products</h4>
-            <ul>
-              <li><a href="/Agro">Agro Commodities</a></li>
-              <li><a href="/Starch">Starch</a></li>
-              <li><a href="/ProcessedFruits">Processed Fruits Products</a></li>
-              <li><a href="/Groceries">Groceries</a></li>
-              <li><a href="/PersonalCare">Personal Care</a></li>
-              <li><a href="/Beverage">Beverage</a></li>
-              <li><a href="/HomeCare">Home Care</a></li>
-            </ul>
-          </div>
+        {/* PRODUCTS */}
+        <div className="footer-links">
+          <h4>Products</h4>
+          <Link to="/agro">Agro Commodities</Link>
+          <Link to="/starch">Starch</Link>
+          <Link to="/processedfruits">Processed Fruits</Link>
+        </div>
 
-          {/* CONTACT */}
-          <div className="footer-col">
-            <h4>Get In Touch</h4>
-            <ul className="footer-contact">
-              <li><FaMapMarkerAlt /> Rohini, Delhi</li>
-              <a href= {`tel:+${phone}`}><li><FaPhoneAlt /> {phone}</li></a>
-              <a href={`mailto:${email}`}><li><FaEnvelope /> {email}</li></a>
-            </ul>
+        {/* GET IN TOUCH */}
+        <div className="footer-contact">
+          <h4>Get in Touch</h4>
 
-            <div className="footer-social">
-              <span><FaInstagram /></span>
-              <span><FaFacebookF /></span>
-              <span><FaWhatsapp /></span>
-            </div>
-          </div>
+          <p><FaMapMarkerAlt /> Rohini, Delhi, India</p>
 
+          <p>
+            <FaPhoneAlt />{" "}
+            <a href={`tel:${phone}`}>{phone}</a>
+          </p>
+
+          <p>
+            <FaEnvelope />{" "}
+            <a href={`mailto:${email}`}>{email}</a>
+          </p>
+        </div>
+
+      </div>
+
+      {/* BOTTOM */}
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Khushal Enterprises. All rights reserved.</p>
+
+        <p className="footer-disclaimer">
+          All brand names and trademarks belong to their respective owners and
+          are used strictly for identification purposes.
+        </p>
+
+        <div className="footer-legal-links">
+          <Link to="/privacypolicy">Privacy Policy</Link> |{" "}
+          <Link to="/terms">Terms & Conditions</Link>
         </div>
       </div>
-
-      {/* BOTTOM BAR */}
-      <div className="footer-bottom">
-        <p>Copyright © 2025 Khushal Enterprises</p>
-        <p>Designed By Devesearch</p>
-      </div>
-
     </footer>
   );
 };

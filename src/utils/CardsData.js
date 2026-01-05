@@ -42,15 +42,15 @@ const cardsData = {
   textOnly2: {
     title: "Khushal Enterprises – Your Trusted Partner in FMCG Exports",
     description:
-      "Khushal Enterprises stands as your primary supporter for exporting Fast-Moving Consumer Goods (FMCG). As a specialized company we export high-demand FMCG to global markets. Our mission focuses on linking premier brand offerings with global purchasing entities so both international clients and manufacturers obtain steady access to vital products. Our extensive product line with competitive wholesale pricing and effective export solutions enables FMCG producers to establish worldwide markets by giving businesses top-tier products at budget-friendly costs. We have trade solutions which perfectly suit every stage of your supply chain from product retailers to distributors and wholesalers alike.",
-    buttonText: "Order in bulk - Call Now",
-    buttonLink: `tel:${phone}`,
+      "Khushal Enterprises stands as your primary supporter for exporting Fast-Moving Consumer Goods (FMCG). As a specialized company we export high-demand FMCG to global markets. Our mission focuses on linking premier brand offerings with global purchasing entities so both international clients and manufacturers obtain steady access to vital products. Our extensive product line with competitive wholesale pricing and effective export solutions enables FMCG producers to establish worldwide markets by giving businesses top-tier products at budget-friendly costs. We have trade solutions which perfectly suit every stage of your supply chain from product retailers to distributors and wholesalers alike."
   },
   textOnly3: {
     title: "Growing Together with Khushal Enterprises",
     description:
       "Our policy at Khushal Enterprises centers on developing enduring alliances between our clients. The company facilitates global expansion for producers and suppliers through efficient trade solutions that connect them to worldwide markets. We serve wholesalers and distributors needing bulk purchases of low-cost goods, supermarkets and retail chains requiring continuous availability of high-quality products, and online sellers operating in e-commerce platforms who need brand-name products. At Khushal Enterprises you can establish partnerships to advance your business by acquiring globally known products of the highest quality through our trusted platform.",
-  },
+    buttonText: "Order in bulk - Call Now",
+    buttonLink: `tel:${phone}`,
+    },
   aboutsingle: {
     image: single,
     title: "About us Khushal Enterprises – Brand in Bulk",

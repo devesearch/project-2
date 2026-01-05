@@ -1,112 +1,68 @@
-/* ===== FOOTER BASE ===== */
 .footer {
-  width: 100%;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-/* ===== TOP FOOTER ===== */
-.footer-top {
-  background: #1c1c1c;
-  padding: 60px 40px;
+  background: black;
+  color: #fff;
+  padding: 60px 40px 20px;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
   gap: 40px;
 }
 
-/* LOGO */
 .footer-logo {
-  width: 120px;
-  margin-bottom: 16px;
+  width: 140px;
+  margin-bottom: 12px;
 }
 
-.footer-about p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ddd;
+.footer-links a {
+  display: block;
+  margin-bottom: 6px;
 }
 
-/* COLUMNS */
-.footer-col h4 {
-  font-size: 18px;
-  margin-bottom: 16px;
-  text-decoration: none;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.footer a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #f5c842;
-}
-
-.footer-col li:hover {
-  color: #f5c842;
-}
-
-/* CONTACT */
-.footer-contact li {
+.footer-contact p {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* SOCIAL */
-.footer-social {
-  margin-top: 16px;
-  display: flex;
-  gap: 12px;
+.footer-legal-links {
+  margin-top: 8px;
+  font-size: 13px;
 }
 
-.footer-social span {
-  background: #333;
-  padding: 8px;
-  border-radius: 6px;
-  cursor: pointer;
+.footer h3,
+.footer h4 {
+  margin-bottom: 12px;
 }
 
-/* ===== BOTTOM BAR ===== */
-.footer-bottom {
-  background: #f5c842;
-  color: #000;
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 40px;
+.footer p,
+.footer a {
+  color: #cbd5e1;
   font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
+.footer a:hover {
+  color: #facc15;
 }
 
-@media (max-width: 600px) {
+.footer-bottom {
+  border-top: 1px solid #334155;
+  margin-top: 40px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-disclaimer {
+  margin-top: 6px;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 }
