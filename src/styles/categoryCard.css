@@ -1,74 +1,67 @@
 .category-card {
-  border-radius: 20px;
+  border-radius: 12px;
   padding: clamp(18px, 3vw, 26px);
   text-align: center;
-  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
 }
 
-/* Hover lift only */
+/* Hover lift */
 .hover-lift:hover {
   transform: translateY(-10px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* ✅ ICON — CENTERED EVERYWHERE */
 .category-icon {
   width: clamp(54px, 4vw, 70px);
   height: clamp(54px, 4vw, 70px);
-  margin-bottom: 12px;
+  margin: 0 auto 12px;        /* 🔥 key fix */
+  display: block;
   object-fit: contain;
 }
 
+/* Title */
 .category-card h3 {
   font-size: clamp(1.15rem, 0.8vw + 1rem, 1.35rem);
   font-weight: 700;
   margin-bottom: 16px;
-  color:black;
+  color: black;
 }
 
+/* List */
 .category-card ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 
+/* List item */
 .category-card li {
   font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.05rem);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  justify-content: center; 
-  color:black;
-  text-align: left;
+  justify-content: center;
+  color: black;
+  text-align: center;
 }
 
+/* Arrow */
 .category-card .arrow {
   font-weight: bold;
   margin-right: 8px;
-  color:black;
+  color: black;
 }
 
+/* ✅ MOBILE TWEAKS ONLY WHERE NEEDED */
 @media (max-width: 640px) {
   .category-card {
-    text-align: left;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
-  .category-card {
-    text-align: center;
-    align-items: center;
+    padding: 20px;
   }
 
   .category-card li {
     justify-content: center;
     text-align: center;
-  }
-
-  .category-icon {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
