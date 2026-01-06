@@ -5,6 +5,7 @@
   overflow: hidden;
 }
 
+/* Slides */
 .carousel-slides {
   position: relative;
 }
@@ -17,36 +18,46 @@
   display: block;
 }
 
+/* Image responsiveness */
 .carousel-slide img {
   width: 100%;
-  height: clamp(240px, 55vh, 520px);
+  height: clamp(220px, 55vh, 520px);
   object-fit: cover;
 }
 
+/* Navigation buttons */
 .prev,
 .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px 12px;
   cursor: pointer;
   border-radius: 50%;
+  z-index: 2;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 12px;
+}
 
+.next {
+  right: 12px;
+}
+
+/* Pagination dots */
 .carousel-dots {
-  position:absolute;
+  position: absolute;
   left: 0;
   right: 0;
-  bottom: 12px;
+  bottom: 14px;
   display: flex;
   justify-content: center;
   gap: 8px;
+  z-index: 2;
 }
 
 .dot {
@@ -61,23 +72,56 @@
   background-color: #333;
 }
 
+/* ------------------ TABLET ------------------ */
 @media (max-width: 768px) {
+  .carousel-slide img {
+    height: clamp(200px, 50vh, 420px);
+  }
+
   .prev,
   .next {
     padding: 8px;
   }
 }
 
+/* ------------------ MOBILE ------------------ */
 @media (max-width: 480px) {
+  .carousel-slide img {
+    height: clamp(180px, 45vh, 320px);
+  }
+
   .prev,
   .next {
-    padding: 6px;
     top: auto;
     bottom: 14px;
     transform: none;
+    padding: 6px 8px;
+  }
+
+  .prev {
+    left: 20px;
+  }
+
+  .next {
+    right: 20px;
   }
 
   .carousel-dots {
     bottom: 10px;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img {
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    background-color: #000;
   }
 }

@@ -1,19 +1,26 @@
 import { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import brochure from "../assets/brands/brochure.pdf";
 import logo from "../assets/images/logo.jpeg";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const closeMenu = () => setOpen(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const closeMenu = () => {
+    setOpen(false);
+    setOpenDropdown(null);
+  };
+
+  const toggleDropdown = (name) => {
+    setOpenDropdown((prev) => (prev === name ? null : name));
+  };
 
   const email = import.meta.env.VITE_EMAIL_ADDRESS;
 
   return (
     <header>
-      {/* TOP BAR */}
       <div className="top-bar">
         Global Reach, Trusted Supply – Your FMCG Export Partner!
         <span className="top-text">
@@ -24,16 +31,11 @@ const Navbar = () => {
         </span>
       </div>
 
-      {/* NAVBAR */}
       <nav className="navbar">
-        {/* LOGO */}
         <div className="navbar-logo">
-          <Link to="/" onClick={closeMenu}>
-            <img src={logo} alt="Khushal Enterprises Logo" />
-          </Link>
+          <img src={logo} alt="Khushal Enterprises logo" />
         </div>
 
-        {/* TOGGLE BUTTON */}
         <button
           className="nav-toggle"
           aria-label="Toggle navigation"
@@ -44,58 +46,55 @@ const Navbar = () => {
           <span></span>
         </button>
 
-        {/* LINKS */}
         <div className={`navbar-links-container ${open ? "open" : ""}`}>
           <ul className="navbar-links">
-            <li>
-              <Link to="/" onClick={closeMenu}>Home</Link>
-            </li>
+            <li><a href="/" onClick={closeMenu}>Home</a></li>
+            <li><a href="/about" onClick={closeMenu}>About Us</a></li>
 
-            <li>
-              <Link to="/about" onClick={closeMenu}>About Us</Link>
-            </li>
-
-            {/* FMCG DROPDOWN */}
+            {/* FMCG */}
             <li className="dropdown">
-              <span className="dropdown-title">FMCG</span>
-              <ul className="dropdown-menu">
-                <li><Link to="/groceries" onClick={closeMenu}>Groceries</Link></li>
-                <li><Link to="/beverage" onClick={closeMenu}>Beverage</Link></li>
-                <li><Link to="/personalcare" onClick={closeMenu}>Personal Care</Link></li>
-                <li><Link to="/homecare" onClick={closeMenu}>Home Care</Link></li>
-              </ul>
+              <button
+                className="dropdown-title"
+                onClick={() => toggleDropdown("fmcg")}
+              >
+                FMCG
+              </button>
+
+              {openDropdown === "fmcg" && (
+                <ul className="dropdown-menu">
+                  <li><a href="/groceries" onClick={closeMenu}>Groceries</a></li>
+                  <li><a href="/beverage" onClick={closeMenu}>Beverage</a></li>
+                  <li><a href="/personalcare" onClick={closeMenu}>Personal Care</a></li>
+                  <li><a href="/homecare" onClick={closeMenu}>Home Care</a></li>
+                </ul>
+              )}
             </li>
 
-            {/* PRODUCTS DROPDOWN */}
+            {/* PRODUCTS */}
             <li className="dropdown">
-              <span className="dropdown-title">Products</span>
-              <ul className="dropdown-menu">
-                <li><Link to="/agro" onClick={closeMenu}>Agro Commodities</Link></li>
-                <li><Link to="/starch" onClick={closeMenu}>Starch</Link></li>
-                <li>
-                  <Link to="/processedfruits" onClick={closeMenu}>
-                    Processed Fruit Products
-                  </Link>
-                </li>
-              </ul>
+              <button
+                className="dropdown-title"
+                onClick={() => toggleDropdown("products")}
+              >
+                Products
+              </button>
+
+              {openDropdown === "products" && (
+                <ul className="dropdown-menu">
+                  <li><a href="/agro" onClick={closeMenu}>Agro Commodities</a></li>
+                  <li><a href="/starch" onClick={closeMenu}>Starch</a></li>
+                  <li><a href="/processedfruits" onClick={closeMenu}>Processed Fruits</a></li>
+                </ul>
+              )}
             </li>
 
-            <li>
-              <Link to="/brands" onClick={closeMenu}>Brands</Link>
-            </li>
-
-            <li>
-              <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
-            </li>
+            <li><a href="/brands" onClick={closeMenu}>Brands</a></li>
+            <li><a href="/contact" onClick={closeMenu}>Contact Us</a></li>
           </ul>
 
-          {/* ACTION BUTTON */}
           <div className="navbar-action">
             <a href={brochure} target="_blank" rel="noreferrer">
-              <button
-                className="nav-btn glow-button hover-lift"
-                onClick={closeMenu}
-              >
+              <button className="nav-btn glow-button hover-lift" onClick={closeMenu}>
                 DOWNLOAD BROCHURE
               </button>
             </a>
@@ -103,11 +102,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE OVERLAY */}
-      <div
-        className={`nav-overlay ${open ? "show" : ""}`}
-        onClick={closeMenu}
-      ></div>
+      <div className={`nav-overlay ${open ? "show" : ""}`} onClick={closeMenu}></div>
     </header>
   );
 };

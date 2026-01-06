@@ -1,7 +1,11 @@
+.hero + .groceries-intro {
+  margin-top: 0;
+}
+
 .groceries-intro {
   max-width: 900px;
-  margin: 48px auto 32px;
-  padding: 0 5vw;
+  margin: 0 auto 32px;   /* 🔥 FIXED */
+  padding: 32px 5vw 0;   /* controlled spacing */
   text-align: center;
   font-size: 1.05rem;
   line-height: 1.6;

@@ -56,3 +56,19 @@
   }
 }
 
+@media (max-width: 640px) {
+  .category-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .category-card li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .category-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

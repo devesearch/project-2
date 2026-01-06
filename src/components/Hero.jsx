@@ -10,11 +10,16 @@ const Hero = ({ data }) => {
       data-aos-once="true"
       data-aos-duration="900"
       style={{
-        height: height || "80vh",
+        minHeight: height || "80vh",
         backgroundImage:
-          image && type !== "split" ? `url(${image})` : "none",
+          image && type !== "split" && type !== "image" ? `url(${image})` : "none",
       }}
     >
+      {/* MOBILE IMAGE  */}
+      {type === "image" && (
+        <img src={image} alt="" className="hero-mobile-img" />
+      )}
+
       {/* OVERLAY & TEXT HERO */}
       {(type === "overlay" || type === "text") && (
         <div className="hero-content">
